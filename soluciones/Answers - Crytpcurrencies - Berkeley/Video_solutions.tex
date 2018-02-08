@@ -1,0 +1,691 @@
+\documentclass[a4paper,9pt]{article}
+\input{prmb}
+
+\usepackage[T1]{fontenc}
+\usepackage{fancyvrb}
+\usepackage{color}
+
+\begin{document}
+\begin{table}[h]
+\begin{tabular}{ll}
+{\textbf{Videos: Solutions}}&\\
+\end{tabular}
+\end{table}
+
+\noindent\rule{16cm}{0.5pt}
+~\\
+\begin{center}
+{\huge Bitcoin and Cryptocurrency Technologies}
+\end{center}
+~\\
+~\\
+\noindent\rule{16cm}{0.5pt}
+	
+	\vspace{1cm}
+ \textbf{CHAPTER 1: INTRODUCTION TO CRYPTO AND CRYPTOCURRECIES}
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Cryptographic hash functions}\\ \\
+			Which of the following is true of SHA-256?
+			\begin{enumerate}
+				\item It has been proven not to have a collision
+				\item We hope that there are no collations
+				\item \textcolor[rgb]{0.2,0.8,0.2}{No collision has ever been found}
+				\item It has been proven that there is not fast way to find collisions
+			\end{enumerate}
+			
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{Hash pointer and data structures}\\ \\
+			Which of the following types of modification of a block chain data structure can be detected? 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Insertion of a block}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Deletion of a block}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Tampering of data in a block}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Re-ordering of block }
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Digital signatures}\\ \\
+			Which of these keys are required for verifying a signature?
+			\begin{enumerate}
+				\item The secret key
+				\item \textcolor[rgb]{0.2,0.8,0.2}{The public key}
+				\item Both the secret key and the public key
+				\item Node. Keys are required only for signing; anyone can verify the signature without a key
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Public key as identities}\\ \\
+			If you generate numerous identities (public keys) for yourself and interact on line using those different identities, what might happen?
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Others might be able to take over your identities if your randomness is bad}
+				\item Others may be able to link you identities because public keys generated on the same computer look similar
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Others may be able to de-anonymize you by analyzing your activity patterns}
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{A simple Cryptocurrency}\\ \\
+			In Scrooge Coin, you have ten coins each of value 3.0. You'd like to transfer coins of value 5.0 to your friends. This require.
+			\begin{enumerate}
+				\item One transaction, one new coin created, and one signature
+				\item \textcolor[rgb]{0.2,0.8,0.2}{One transaction, two new coins created. And two signatures}
+				\item Two transaction, two new coins created, and four signatures
+				\item Two transaction, one new coins created, and two signature
+			\end{enumerate}
+			
+		\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+	
+	\vspace{1cm}
+	\textbf{CHAPTER 2: HOW BITCOIN ACHIEVES DECENTRALIZATION  }
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Centralization vs. Decentralization}\\ \\
+			Which of these factors make distributes consensus hard?
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Nodes may crash}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Nodes maybe be taken over by malware}
+				\item Encrypted message may be intercepted and decrypted
+				\item \textcolor[rgb]{0.2,0.8,0.2}{There is latency on the network}
+			\end{enumerate}
+			
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{Distributed consensus}\\ \\
+			Why is bitcoin able to reach consensus in practice despite this being a generally difficult problem?
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Financial incentives cause participant work together}
+				\item Only small groups of nodes have to reach consensus rather than the network having to globally reach consensus
+				\item The order of blocks doesn't matter for consensus
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Consensus only has to be reached over long time scales}
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Consensus without identities: the block chain}\\ \\
+			What can a malicious node do?
+			\begin{enumerate}
+				\item Create valid transactions originating from someone else address
+				\item Prevent a valid transaction from getting any confirmations
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Ignore the longest valid branch rule when proposing a new block}
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Incentives of proof of work}\\ \\
+			Proof of work is a way to:
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Select nodes in proportion of computing power}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Let nodes compete for the `right' to creates blocks}
+				\item Make it impossible for one miner to act like many different miners
+			\end{enumerate}
+			\vspace{3mm} %5mm vertical space
+			A block in the block chain was found at time t. what is the probability that next block was found at or before t + 10 minutes? Assume that the total hash power stay constant. 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{More than 50\%}
+				\item Less than 50\%
+				\item Exactly 50\%
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Putting it all together}\\ \\
+			A 51\% attacker can potentially:
+			\begin{enumerate}
+				\item Steal coin from an existing address
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Make it unprofitable for other miners to mine}
+				\item Change the block reward 
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Suppress transactions form the block chain}
+			\end{enumerate}	
+			\vspace{3mm} %5mm vertical space
+			Which of the following are true?
+			\begin{enumerate}
+				\item 51\% attacks are difficulty because an adversary would need to control more than half of the nodes on the bitcoin network
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Proof-of-work is essential for preventing Sybil attacks on the bitcoin blockchain}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{As a transaction gets buried deeper in the blockchain, it becomes less and less likely that it will ever be undone because the work require to make a longer alternate branch becomes more and more difficult }
+			\end{enumerate}
+	
+		\end{enumerate}	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			
+	\vspace{1cm}
+	\textbf{CHAPTER 3: MECHANICS OF BITCOIN}
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Bitcoin transactions}\\ \\
+			In a typical transaction
+			\begin{enumerate}
+				\item There is one signature that covers all the inputs
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Each input contains a signature}
+				\item There is one signature that covers all the output
+				\item Each output contains a signature
+			\end{enumerate}
+			
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{Bitcoins Scripts}\\ \\
+			Bitcoin's script supports instructions whose effect is:
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Adding two numbers}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Conditions execution (if/then)}
+				\item Looping
+				\item Recursion
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Hashing}
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Applications of bitcoin scripts}\\ \\
+			Alice is paying for a service using bitcoin micropayments. If she simply disconnects at some point without notifying Bob and stops sending micropayments. What can Bob do?
+			\begin{enumerate}
+				\item Bob is out of luck. He doesn't earn any bitcoin and must pursue legal recourse
+				\item Bob can redeem the maximum amount that Alice initially escrowed into a multisig address
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Bob can redeem the latest micropayment transaction that Alice sent in the last time period before disconnecting, which matches the length of services she received.}
+				\item Bob can refuse to sign the refund transaction, so both Alice and Bob will end up losing Bitcoins, which will sit in the multisig escrow forever
+			\end{enumerate}
+			\vspace{3mm} %5mm vertical space
+			Bitcoin micropayments require the use of:
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Multisignature transactions}
+				\item Proof of burn
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Time-locked transactions}
+				\item Pay-to-script-hash
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Bitcoin blocks}\\ \\
+			Blocks contain a tree of transactions instead of a flat list because:
+			\begin{enumerate}
+				\item It result is smaller blocks
+				\item It´s easier to insert or delete new transactions while the block is being assembles 
+				\item \textcolor[rgb]{0.2,0.8,0.2}{It enables efficiently proving that a transaction is include in a block}
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{The bitcoin network}\\ \\
+			If two transactions A-->B and A<--C are both broadcasted almost simultaneously from different modes, what determines which one will eventually end up in the block chain?
+			\begin{enumerate}
+				\item The transaction that reaches the majority of nodes first will win
+				\item The transactions that was broadcast first will win
+				\item \textcolor[rgb]{0.2,0.8,0.2}{The miner who finds the next block will likely resolve the tie by including one of the transactions in the block}
+				\item Each node has its own version of the block chain containing the transaction that it heard about first 
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Limitations and improvements}\\ \\
+			Which of the following requires a hard fork?
+			\begin{enumerate}
+				\item Disabling the OP\_SHA1 instruction
+				\item A requirement that each transaction have it outputs sorted by values in ascending (or not-decreasing) order
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Increasing the maximum permitted size of blocks}
+				\item Decreasing the maximum permitted size of blocks
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Adding a new OP\_SHA3 script instruction}
+			\end{enumerate}
+	
+		\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\vspace{1cm}
+	\textbf{CHAPTER 4: HOW TO STORE AND USE BITCOINS}
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{How to store and use bitcoins}\\ \\
+			What is bitcoin wallet?
+			\begin{enumerate}
+				\item An address that contains a lot of unspent bitcoins
+				\item \textcolor[rgb]{0.2,0.8,0.2}{A piece of software that remember an individual's bitcoins address and keys}
+				\item A type of mining software
+				\item An online exchange that people can go to in order to acquire bitcoins
+			\end{enumerate}
+			
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{Hot and cold storage}\\ \\
+			Which of the following statements are true about cold wallet storage? (check all that apply) 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Cold storage stores keys in a device without network access}
+				\item Cold storage tends to be more convenient
+				\item Cold storage can store more bitcoins
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Hot storage wallets can generate arbitrarily many cold storage addresses without contacting the cold storage}
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Splitting and sharing keys}\\ \\
+			In the K-out-of-N secret sharing scheme presented, the size of each share (in bits) will be
+			\begin{enumerate}
+				\item 1/K times the size of the secret	
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Equal to the size of the secret}
+				\item K times the size of the secret 
+				\item N times the size of the secret	
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Online wallets and exchanges}\\ \\
+			Which of these are risks of Bitcoin exchanges that are NOT risks of maintaining one's own hot or cold wallet? (check all that apply) 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Bank runs}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Ponzi schemes}
+				\item Key compromises or leaks	
+				\item Double-spend attacks
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Payment services}\\ \\
+			In the scenario presented, which of these parties are exposed to exchange rate risk? (check all that apply) 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{User}
+				\item Merchant \\ \textcolor[rgb]{0.49,0.62,0.75}{The user is exposed to exchange rate rick to some degree since they must hold bitcoins at least temporally to be able to pay whit bitcoins.}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Payment service}
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Transactions fees}\\ \\
+			Doesn't have questions 
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Currency exchange markets}\\ \\
+			In the model presented, which of these are sources of demand for bitcoins? (check all that apply) 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Mediating fiat-currency transactions} \\ \textcolor[rgb]{0.49,0.62,0.75}{The model presented considered only two sources of demand: meadiating fiat-currency transaction and investment. Theoretical model must often leave out some factors that matter in practice in order to keep the analysis tractable. Arguably, paying transaction fees is also a source of demand for bitcoins.}
+				\item Demand deposits of bitcoins
+				\item Gambling 
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Investment} \\ \textcolor[rgb]{0.49,0.62,0.75}{The model presented considered only two sources of demand: meadiating fiat-currency transaction and investment. Theoretical model must often leave out some factors that matter in practice in order to keep the analysis tractable. Arguably, paying transaction fees is also a source of demand for bitcoins.}
+				\item Paying transaction fees
+			\end{enumerate}		
+		\end{enumerate}
+		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{2cm}
+	\textbf{CHAPTER 5: BITCOIN MINING}
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{The task of Bitcoin Miners}\\ \\
+			Which of the following are true about Bitcoin miners? 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{The target hash has become so small that the block header nonce alone isn't generally large enough to allow miners so search enough of the hash output space to find a valid block}
+				\item Bitcoin miners can more efficiently mine for blocks by specifically targeting parts of the nonce search space that have more puzzle solutions
+				\item Over a 2 week period, the average time to mine a block is always 10 minutes
+				\item \textcolor[rgb]{0.2,0.8,0.2}{The mining difficulty is recomputed roughly every 2 weeks to keep the proof-of-work puzzle difficult}
+			\end{enumerate}
+			
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{Mining Hardware}\\ \\
+			Which statement about Bitcoin miners is NOT true?  
+			\begin{enumerate}
+				\item If the global hash rate doubles every two months, a new piece of hardware that a miner buys will find most of the blocks that it ever will mine in the first six months of operation
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Bitcoin miners can recoup a reasonable fraction of their initial expenses by selling their ASICs once they are done with them to other users for less computationally intense purposes}
+				\item Many miners will consider the climate of an area when setting up mining operations because of the cost of cooling their equipment
+				\item Mining Bitcoin on a modern CPU will yield negligible mining rewards	
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Energy Consumption \& Ecology}\\ \\
+			Which of the following are assumptions made about the UPPER bound for the energy used for mining Bitcoins? (check all that apply) 
+			\begin{enumerate}
+				\item Everyone mines where it is cold (cooling doesn't consume energy)
+				\item Everyone mines at the maximum claimed efficiency	
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Miners mine up to the point that all of the money they earn is used to pay for electricity}
+				\item The energy efficiency of mining hardware decreases with age
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Miners all pay the same for electricity}
+			\end{enumerate}
+		 \vspace{3mm} %5mm vertical space
+			Which of the following are assumptions made about the LOWER bound for the energy used for mining Bitcoins? (check all that apply) 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Everyone mines where it is cold (cooling doesn't consume energy) }
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Everyone mines at the maximum claimed efficiency}
+				\item Miners mine up to the point that all of the money they earn is used to pay for electricity
+				\item The energy efficiency of mining hardware decreases with age
+			\end{enumerate}
+		
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Mining Pools}\\ \\
+			Mining pools... 
+			\begin{enumerate}
+				\item Let members earn more rewards, on average, than they would by mining alone 
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Typically make all their members search for blocks with the same coinbase address (the address that receives mining rewards) }
+				\item Evenly divide up block rewards between all members of the pool
+				\item Can undermine the security of Bitcoins consensus algorithm, but this isn't a problem in practice since the majority of miners aren't part of pools
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Mining Incentives and Strategies}\\ \\
+			Which of the following are true about potential mining strategies Bitcoin miners can employ? (check all that apply) 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Miners who control more mining power have more potentially profitable strategies available}
+				\item Block withholding, forking, and other attacks have been frequently carried out in practice
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Some alternative strategies might be motivated by goals other than earning more bitcoins}
+			\end{enumerate}
+			
+		\end{enumerate}
+				
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+\vspace{1.5cm}
+	\textbf{CHAPTER 6: BITCOIN AND ANONYMITY}
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Anonymity Basics}\\ \\
+			Unlinkability in Bitcoin could mean
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{It's hard to link different address  owned by the same user}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{It's hard to link different transactions made by the same user}
+				\item It's hard to link different transactions having the same output address
+			\end{enumerate}
+			
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{How to de-anomymize Bitcoin}\\ \\
+			Which of the following observations  would suggest that address A and B may be controlled by the same user/entity
+			\begin{enumerate}
+				\item There is a transaction with A as a input address and B as output addresses 
+				\item \textcolor[rgb]{0.2,0.8,0.2}{There is a transaction with both A and B as input addresses} 
+				\item There is a transaction with both A and B as output addresses 
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Mixing}\\ \\
+			Which of these techniques can improve the anonymity provide by mixing services?(check all that apply)   
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Using a series of mixes}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Using the same `chunk' size for all mixing transactions}
+				\item Charging a constant percentage of the transaction value as a mixing fee
+			\end{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Decentralized Mixing}\\ \\
+			Which of these is NOT an advantage of CoinJoin over centralized mixes
+			\begin{enumerate}
+				\item There by mixes is impossible
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Built-in protection against denial-of-service attacks}
+				\item Potentially better anonymity because centralized mines can e compromised by adversaries. 
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Zerocoin and Zerocash}\\ \\
+			What is `zero knowledge' about zero-knowledge proof?
+			\begin{enumerate}
+				\item It take no outside knowledge to verify the correctness of the proof
+				\item \textcolor[rgb]{0.2,0.8,0.2}{It is proof that doesn't reveal any knowledge to create}
+				\item It is a proof that requires no knowledge to create
+				\item It is a proof that you have no knowledge of something 		
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Tor and the Silk Road}\\ \\
+			Doesn't have questions 
+						
+		\end{enumerate}
+		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{1.0cm}
+	\textbf{CHAPTER 7: COMMUNITY, POLITICS, AND REGULATION}
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Consensus in Bitcoin}\\ \\
+			Doesn't have questions 
+			
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{Bitcoin Core Software}\\ \\
+			Which of the following is true about a fork of Bitcoin's rules which results in a fork of the block chain into two branches? 
+			\begin{enumerate}
+				\item Anyone who owned bitcoins before the fork can choose which branch to transfer their coins to
+				\item The fork will eventually be resolved due to the longest valid branch rule
+				\item \textcolor[rgb]{0.2,0.8,0.2}{The fork doubles the total value of the currency}
+				\item A transaction can be valid in both forks
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{stakeholders: Who's in charge?}\\ \\
+			Which participants in the Bitcoin ecosystem have some amount of power in a negotiation about rule-setting?   
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Bitcoin Core developers}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Miners}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Investors}	
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Merchants}	
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Payment services}
+			\end{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Roots of Bitcoin}\\ \\
+			Doesn't have questions 
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Governments Notice Bitcoin}\\ \\
+			According to the lecture, what's one way that governments have tried to enforce capital controls in a world with Bitcoin? 
+			\begin{enumerate}
+				\item Shutting down Bitcoin-based markets for illegal items such as Silk Road
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Disconnecting Bitcoin from the local fiat currency }
+				\item Blocking the Bitcoin protocol
+				\item Purchasing mining hardware and attempting a Goldfinger attack
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Anti Money-Laundering}\\ \\
+			According to the lecture, what steps do governments take to prevent money laundering? (Check all that apply) 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Require some businesses that handle money to know their customers identities}
+				\item Constantly monitor the Bitcoin network and block chain 
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Require a variety of companies to file reports describing any large transactions they are a party to}
+				\item Limit the maximum size of financial transactions
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Regulation}\\ \\
+			A reputation-based approach to fixing a lemons market might not work:
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{At the end of a seller's presence in the market}	
+				\item When sellers don't provide warranties for products
+				\item \textcolor[rgb]{0.2,0.8,0.2}{When consumers don't do repeat business with the same entity}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{At the beginning of a sellers presence in the market}
+			\end{enumerate}
+			\vspace{3mm} %5mm vertical space
+			Which of these are signs that there might be a market failure?
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{The market is completely unregulated}
+				\item Sellers agree with each other to raise prices
+				\item Sellers agree not to compete with each other and offer a reduced selection of products
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{New York's BitLicense Proposal}\\ \\
+			Doesn't have questions 
+			
+		\end{enumerate}
+		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{1.0cm}
+	\textbf{CHAPTER 8: ALTERNATIVE MINING PUZZLES}
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Essential Puzzle Requirements}\\ \\
+ 			Doesn't have questions 
+			
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{ASIC Resistant Puzzles}\\ \\
+			ASIC resistance... 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{seeks to make it more appealing to mine with regular consumer devices than it is today}
+				\item has been successfully achieved in practice using the `script' memory-hard hash function
+				\item \textcolor[rgb]{0.2,0.8,0.2}{is a response to the centralization of Bitcoin mining}
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Proof-of-usefol-work}\\ \\
+			Proof-of-useful-work cryptocurrency designs... 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{differ from traditional volunteer distributed computing projects because cryptocurrencies cannot rely on a trusted administrator to select and distribute the problems to be solved}
+				\item have been successfully used to solve computational problems such as protein folding 
+				\item \textcolor[rgb]{0.2,0.8,0.2}{should preferably be based on problems whose solution benefits the public, rather than the solver, to avoid skewing the incentives of miners}
+			\end{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Nonoutsourceable Puzzle}\\ \\
+			In a vigilante attack against a mining pool, the attacker,
+			\begin{enumerate}
+				\item discards both shares and blocks that he finds
+				\item \textcolor[rgb]{0.2,0.8,0.2}{submits shares but discards blocks}
+				\item discards shares while submitting blocks to a different mining pool
+			\end{enumerate}	
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Proof-of-Stake `Virtual Mining'}\\ \\
+			Which of these is true of virtual mining? 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Virtual mining does away with most of the power requirements of proof-of-work systems}
+				\item A proof-of-stake system makes 51\% attacks impossible
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Several variations of virtual mining have been proposed}
+			\end{enumerate}	
+		
+		\end{enumerate}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\vspace{1.0cm}
+	\textbf{CHAPTER 9: BITCOIN AS PLATFORM}
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Bitcoin as an Append-Only Log}\\ \\
+ 			In which of these situations could secure timestamping be useful? Assume that there is no way to prove that you didn't timestamp multiple values
+			\begin{enumerate}
+				\item Proving that you don't know something at a specific time 
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Proving possession of a document at a specific time}
+				\item Securely saving a document at a specific time 
+				\item Proving that you can predict the winner of the 2016 US presidential election
+			\end{enumerate}
+			
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{Bitcoin as Smart Property}\\ \\
+			The OpenAssets protocol works by 
+			\begin{enumerate}
+				\item Enabling conversion between Bitcoin and a new type of coin 
+				\item Forking Bitcoin to allow many different types of "colored" coins
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Associating extra metadata with bitcoins}
+				\item Exploiting non-fungibility of bitcoins to impose a blacklist
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Secure Multi-Party Lotteries in Bitcoin}\\ \\
+			Which of the following features does the Bitcoin secure multi-party lottery system presented depend on?
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Hash commitments} 
+				\item Colored coins
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Multisignatures}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Time-locked transactions}
+				\item Micropayments	
+			\end{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Bitcoin as Randomness Source}\\ \\
+			Which of these are advantages of using the Bitcoin blockchain to generate a cryptographic beacon?
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{The beacon outputs random bits at frequent intervals }
+				\item Fresh random bits can be obtained at any desired future time 
+				\item Manipulating the beacon output requires 51% mining power
+				\item \textcolor[rgb]{0.2,0.8,0.2}{The cost to an attacker to manipulate the beacon's output is quantifiable }
+				\item \textcolor[rgb]{0.2,0.8,0.2}{No central authority is needed}
+			\end{enumerate}	
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Prediction Markets \& Real-World Data Feeds}\\ \\
+			In a prediction market where shares pay out if and only if a potential future event happens: 
+			\begin{enumerate}
+				\item The average price of all shares traded as a fraction of the payout is an estimate of the event's likelihood
+				\item \textcolor[rgb]{0.2,0.8,0.2}{The current price of shares as a fraction of the payout is an estimate of the event's likelihood}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{A trader who is able to control or influence the outcome of the event will likely be able to make a profit}
+			\end{enumerate}	
+		
+		\end{enumerate}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	
+\vspace{1.0cm}
+	\textbf{CHAPTER 10: ALTCOINS AND THE CRYPTOCURRENCY ECOSYSTEM}
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Short History of Altcoins}\\ \\
+ 			Which of these statements about altcoins are true?
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Bitcoin has a higher "market capitalization" than all altcoins combined }
+				\item Bitcoin is the most widely forked cryptocurrency
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Namecoin supports additional functionality such as domain-name registration that is not found in Bitcoin}
+			\end{enumerate}
+			
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{Interaction Between Bitcoin and Altcoins}\\ \\
+			In a merge-mined altcoin scenario:
+			\begin{enumerate}
+				\item Bitcoin blocks include transactions from the altcoin 
+				\item Altcoin block headers include a hash pointer to a Bitcoin block
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Bitcoin block headers include the merkle root of transactions for an altcoin block}
+				\item The altcoin has the same hash target as Bitcoin at all times
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Lifecycle of an Altcoin}\\ \\
+ 			Doesn't have questions 
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{Bitcoin-Backed Altcoins, `Side Chains'}\\ \\
+			Here are several ways in which new coins in an altcoin can be allocated to users. Which of these require changes to Bitcoin? 
+			\begin{enumerate}
+				\item All coins in the altcoin are generated through (merge) mining and are allocated to miners
+				\item Altcoin allocation is "grandfathered" from Bitcoin - every owner of bitcoins becomes the owner of a certain number of altcoins (in a fixed proportion of bitcoins to altcoins)
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Bitcoin is used as a "reserve currency" for the altcoin - a unit of the altcoin can be created by putting 1 BTC into escrow; the bitcoin can be released by provably destroying one altcoin unit}
+				\item A unit of the altcoin is created by provably destroying one bitcoin
+			\end{enumerate}	
+			
+		\end{enumerate}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+\vspace{1.0cm}
+	\textbf{CHAPTER 11: THE FUTURE OF BITCOIN}
+		\begin{enumerate}
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{The Block Chain as a Vehicle for Decentralization}\\ \\
+ 			In the smart property scenario presented, where Alice sells her car to Bob via an atomic transaction:
+			\begin{enumerate}
+				\item Bob must make sure that Alice deletes her private key so that she does not retain the ability to activate the car
+				\item Alice and Bob must be physically near the car for the transfer of control to take effect
+				\item Requires modifications to Bitcoin because there is no way for two different people who don't trust each other to securely sign the same transaction
+				\item \textcolor[rgb]{0.2,0.8,0.2}{The protocol doesn't prove to Bob, before the sale, that the transaction output that Alice wants to sell him actually corresponds to the car he wants to buy}
+			\end{enumerate}			
+						
+		  \vspace{5mm} %5mm vertical space
+			\item\textbf{Routes of Blockchain Integration}\\ \\
+			Which of these are potential ways to improve security when using Bitcoin as a platform for decentralized commerce?
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Atomic exchange}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Reputation}
+				\item Warranties 
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Escrow and dispute mediation}
+			\end{enumerate}
+			
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{What Can We Decentralize?}\\ \\
+ 			Data feeds...
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{allow arbiters to assert facts about the world into the block chain} 
+				\item \textcolor[rgb]{0.2,0.8,0.2}{are useful for implementing decentralized prediction markets}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{can be decentralized to a degree using Multisignature}
+			\end{enumerate}	
+		
+			\vspace{5mm} %5mm vertical space
+			\item\textbf{When is Decentralization a Good Idea}\\ \\
+			According to the lecture, what are some issues with using cryptography to enforce contracts? 
+			\begin{enumerate}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{It is problematic if the state does not recognize a block chain based notion of property because the state will always be the final arbiter}
+				\item The technology behind smart contracts is not powerful enough to express the logic needed for real-world contracts like derivatives
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Cryptographic security lacks the corrective controls of real-world security such as prosecution of criminals}
+				\item \textcolor[rgb]{0.2,0.8,0.2}{Losing a device containing your private keys could result in the inability to use your smart property}
+			\end{enumerate}	
+			
+		\end{enumerate}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
